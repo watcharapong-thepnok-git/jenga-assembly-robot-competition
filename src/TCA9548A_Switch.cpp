@@ -19,13 +19,9 @@ void TCA9548A_Switch::selectSingleChannel(uint8_t channel, bool checkCache) {
 
   if (bus->endTransmission() != 0) {
     resetCache();
-
-    return;
   }
 
   channelBits = channelMask;
-
-  return;
 }
 
 void TCA9548A_Switch::deselectAllChannels(bool checkCache) {
@@ -40,17 +36,11 @@ void TCA9548A_Switch::deselectAllChannels(bool checkCache) {
 
   if (bus->endTransmission() != 0) {
     resetCache();
-    
-    return;
   }
 
   channelBits = channelMask;
-
-  return;
 }
 
 void TCA9548A_Switch::resetCache() {
   channelBits = 0xFFFF;
-
-  return;
 }
