@@ -11,7 +11,7 @@ public:
   void selectSingleChannel(uint8_t channel, bool checkCache);
   void deselectAllChannels(bool checkCache);
 
-  void resetCache();
+  void resetCache(void);
   
 private:
   TwoWire* bus;
